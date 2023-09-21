@@ -1,0 +1,10 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## 1.1.0 (2023-09-21)
+
+
+### Features
+
+* Standard release add ([1800f08](https://github.com/ANIKET1074/Task_1_Crystegraphy/commit/1800f08b93799198aa2119dd51ac03e5bcb178bb))
