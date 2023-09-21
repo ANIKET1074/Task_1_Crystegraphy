@@ -1,0 +1,23 @@
+{
+  "name": "crystegraphy-tasks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "commit": "standard-version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ANIKET1074/Task_1_Crystegraphy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ANIKET1074/Task_1_Crystegraphy/issues"
+  },
+  "homepage": "https://github.com/ANIKET1074/Task_1_Crystegraphy#readme",
+  "devDependencies": {
+    "standard-version": "^9.5.0"
+  }
+}
