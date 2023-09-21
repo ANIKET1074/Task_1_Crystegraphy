@@ -1,0 +1,25 @@
+/* TODO /
+
+[x] Analysing Figma
+
+
+
+
+/ Commit message format :
+    <type>[optional scope]: <description>
+    [optional body]
+    [optional footer(s)]
+
+    fix for fix bug
+    feat use for feature
+
+    // build chore ci docs style refactor test //
+
+    optional scope [any additional information , use nouns]
+
+    description : [short message , written in imperative - use add instead of added or adds]
+    optional body : [free form , explain changes]
+ */
+
+
+ npm i -D standard-version
