@@ -1,0 +1,46 @@
+@use "colors" as c;
+@use "mixins" as m;
+@use "typography" as t;
+
+.about {
+  @include m.flex(row, center, space-between);
+  max-width: 78rem;
+  margin: 0 auto;
+  margin-top: 5rem;
+  position: relative;
+  //   gap: 2rem;
+
+  &__article {
+    @include m.flex(column, start, flex-start);
+    gap: 1.5rem;
+    width: 35rem;
+  }
+
+  &__img {
+    width: 25rem;
+  }
+
+  &__heading {
+    color: c.$color1;
+  }
+
+  &__btn {
+    background-color: c.$color1;
+    border-radius: 10px;
+    padding: 0.5rem 1.3rem;
+    line-height: 22.18px;
+    color: c.$color3;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+  }
+
+  &::after {
+    content: url("../assets/images/footprint1.png");
+    position: absolute;
+    top: 80%;
+    // bottom: 0;
+    right: -7%;
+  }
+}
