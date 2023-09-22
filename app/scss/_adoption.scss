@@ -1,0 +1,67 @@
+@use "colors" as c;
+@use "mixins" as m;
+@use "typography" as t;
+
+.adoption {
+  width: 90%;
+  @include m.flex(row, center, center);
+  gap: 4.93rem;
+  margin: 0 auto;
+  margin-top: 4rem;
+  position: relative;
+
+  &__img {
+    width: 50%;
+    height: 100%;
+    @include m.flex(row, center, flex-end);
+  }
+
+  &__process {
+    width: 55%;
+  }
+
+  &__heading {
+    color: c.$color1;
+  }
+
+  &__ul {
+    @include m.flex(column, start, center);
+    width: 100%;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    padding: 0;
+  }
+  &__work-container {
+    @include m.flex(row, center, center);
+    gap: 1.5rem;
+
+    &:nth-child(even) {
+      margin-inline-start: 2.18rem;
+      //   align-items: end;
+      //   justify-content: flex-end;
+    }
+  }
+
+  &__list {
+    font-size: 1.25rem;
+  }
+
+  &__counter {
+    @include m.flex(row, center, center);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: c.$bg-color;
+    color: c.$color1;
+    font-size: 1.5rem;
+    font-weight: 600;
+    box-shadow: 0 0 30px 0 hsla(0, 0%, 0%, 0.2);
+  }
+
+  &::after {
+    content: url("../../assets/images/footprint2.png");
+    position: absolute;
+    bottom: -15%;
+    left: -4%;
+  }
+}
