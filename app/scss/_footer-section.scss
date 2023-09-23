@@ -1,0 +1,29 @@
+@use "colors" as c;
+@use "mixins" as m;
+@use "typography" as t;
+
+.footer {
+  background-image: c.$footer;
+  color: c.$bg-color;
+  //   z-index: 200;
+  margin-top: 5rem;
+  &__section {
+    @include m.flex(row, center, space-evenly);
+    // padding: 2rem;
+  }
+  &__sections {
+    @include m.flex(column, start, center);
+    gap: 1.5rem;
+    width: 18rem;
+  }
+
+  &__contact-details {
+    @include m.flex(row, start, center);
+    gap: 1.25rem;
+  }
+
+  &__contact-img {
+    height: 20px;
+    width: 20px;
+  }
+}

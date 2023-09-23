@@ -1,0 +1,42 @@
+@use "colors" as c;
+@use "mixins" as m;
+@use "typography" as t;
+
+.header {
+  background-color: transparent;
+  position: relative;
+  z-index: 3;
+  color: c.$color3;
+  &__section {
+    @include m.flex(row, center, space-between);
+    max-width: 85rem;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    margin-bottom: 0;
+    @include m.flex(row, center, center);
+    gap: 2px;
+  }
+}
+
+.nav {
+  &__ul {
+    @include m.flex(row, center, center);
+    gap: 2.5rem;
+  }
+
+  &__link {
+    color: c.$color3;
+    padding: 0.5rem 1rem;
+    background-color: c.$color1;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+
+  &__items {
+    color: c.$color3;
+    font-weight: 600;
+    font-size: 18px;
+  }
+}

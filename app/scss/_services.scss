@@ -1,0 +1,56 @@
+@use "colors" as c;
+@use "mixins" as m;
+@use "typography" as t;
+
+.services {
+  @include m.flex(column, center, center);
+  max-width: 77rem;
+  margin: 0 auto;
+  margin-top: 8rem;
+  gap: 4rem;
+
+  &__heading {
+    color: c.$color1;
+  }
+
+  &__ul {
+    @include m.flex(row, center, center);
+    gap: 6rem;
+  }
+
+  &__list {
+    position: relative;
+    @include m.flex(column, start, flex-start);
+    width: 22rem;
+    height: 15rem;
+    padding: 0 1.3rem;
+    padding-top: 2rem;
+    gap: 1rem;
+    border: 3px solid c.$color1;
+    border-radius: 10px;
+    box-shadow: 0 0 30px 0 hsla(0, 0%, 0%, 0.25);
+    // box-shadow: 12px 12px 20px 0px hsla(0, 0, 0, 0.25);
+    // margin: 2px;
+  }
+
+  &__imgs {
+    // padding: 1rem 0;
+    // padding: 1rem 0;
+    height: 15%;
+    width: 19%;
+    height: 28%;
+    position: absolute;
+    top: -15%;
+    background-color: c.$color1;
+    border-radius: 50%;
+    text-align: center;
+    padding: 1rem;
+    left: 8%;
+  }
+
+  &__img {
+    width: 100%;
+    // margin: 1rem 0;
+    height: 100%;
+  }
+}
