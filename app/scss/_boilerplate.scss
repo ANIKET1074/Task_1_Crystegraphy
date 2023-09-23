@@ -1,0 +1,39 @@
+@use "typography" as t;
+@use "colors" as c;
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: t.$font;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: c.$bg-color;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: c.$color2;
+  line-height: 22.18px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+}
