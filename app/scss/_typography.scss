@@ -1,7 +1,19 @@
+@use "breakpoints" as b;
 @import url("https://fonts.googleapis.com/css2?family=Signika:wght@400;600;700&display=swap");
 
 // Font family
 $font: "Signika", sans-serif;
+
+// Font size for heading responsive
+$font-sm: 2rem;
+$font-md: 2.5rem;
+$font-lg: 3rem;
+$font-xlg: 3.25rem;
+
+// Font size for paragraph
+$font-p-sm: 0.925rem;
+$font-p-md: 1rem;
+$font-p-lg: 1.2rem;
 
 h1,
 h2,
@@ -11,12 +23,33 @@ h3 {
   line-height: 61.6px;
   margin-bottom: 0;
 }
+
 h1 {
-  font-size: 3rem;
+  font-size: $font-sm;
+  line-height: 2.85rem;
+
+  @include b.breakpoint("medium") {
+    font-size: $font-md;
+    line-height: 3.57rem;
+  }
+  @include b.breakpoint("large") {
+    font-size: $font-lg;
+    line-height: 4.28rem;
+  }
+  @include b.breakpoint("xlarge") {
+    font-size: $font-xlg;
+    line-height: 4.28rem;
+  }
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.65rem;
+  line-height: 2.25rem;
+
+  @include b.breakpoint(large) {
+    font-size: 2rem;
+    line-height: 2.85rem;
+  }
 }
 p {
   margin-top: 0;
@@ -24,4 +57,23 @@ p {
   text-align: justify;
   font-weight: 400;
   margin-bottom: 0;
+
+  @include b.breakpoint("medium") {
+    font-size: $font-p-md;
+    line-height: 1.42857rem;
+  }
+  @include b.breakpoint("large") {
+    font-size: $font-p-lg;
+    line-height: 1.71rem;
+  }
+  @include b.breakpoint("xlarge") {
+    font-size: $font-p-lg;
+    line-height: 1.71rem;
+  }
 }
+
+// button {
+//   font-family: $font;
+//   font-weight: 600;
+//   font-size: 1.5rem;
+// }

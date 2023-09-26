@@ -1,6 +1,7 @@
 @use "colors" as c;
 @use "mixins" as m;
 @use "typography" as t;
+@use "breakpoints" as b;
 
 .home {
   background-image: url("../../assets/images/bg.png");
@@ -9,30 +10,54 @@
   background-repeat: no-repeat;
   color: c.$bg-color;
   width: 100%;
-  height: 43rem;
+  opacity: 0.9;
+  height: 42rem;
 
   &__heading {
     padding-right: 4rem;
   }
   &__container {
-    width: 31rem;
-    @include m.flex(column, start, center);
+    @include m.flex(column, start, flex-start);
+    width: 80%;
+    left: 5%;
     gap: 2rem;
-    // padding: 1rem 1.5rem;
     position: absolute;
-    top: 6%;
-    left: 6%;
+    top: 3%;
+    // text-shadow: 1px 1px 10px #000;
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    padding: 1rem;
+
+    @include b.breakpoint(medium) {
+      @include m.flex(column, start, flex-start);
+      gap: 2rem;
+      top: 4%;
+      width: 50%;
+      background-color: transparent;
+    }
+
+    @include b.breakpoint(large) {
+      @include m.flex(column, start, flex-start);
+      gap: 2rem;
+      width: 35%;
+      top: 4.5%;
+      left: 5%;
+    }
   }
 
   &__btn {
     background-color: c.$color1;
     border-radius: 10px;
-    padding: 0.5rem 1.3rem;
+    padding: 0.5rem 1rem;
     line-height: 22.18px;
     color: c.$color3;
     cursor: pointer;
-    font-weight: 600;
-    font-size: 16px;
-    border: none;
+    transition: all 0.4s ease-in-out;
+    border: 1px solid transparent;
+
+    &:hover {
+      background-color: c.$darkcolor;
+      border: 1px solid c.$color1;
+    }
   }
 }

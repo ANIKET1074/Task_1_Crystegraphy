@@ -1,3 +1,5 @@
+@use "breakpoints" as b;
+
 @mixin flex($direction, $align: center, $justify: flex-start) {
   display: flex;
   flex-direction: $direction;
@@ -13,5 +15,7 @@
 }
 
 @mixin grid-col-span($size) {
-  grid-column: span $size;
+  @include b.breakpoint(large) {
+    grid-column: span $size;
+  }
 }

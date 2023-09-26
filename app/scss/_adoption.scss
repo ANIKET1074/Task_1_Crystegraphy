@@ -1,23 +1,42 @@
 @use "colors" as c;
 @use "mixins" as m;
 @use "typography" as t;
+@use "breakpoints" as b;
 
 .adoption {
-  width: 90%;
-  @include m.flex(row, center, center);
+  @include m.flex(column, center, center);
+  flex-direction: column-reverse;
   gap: 4.93rem;
-  margin: 0 auto;
-  margin-top: 4rem;
-  position: relative;
+  margin: auto;
+  margin-top: 8rem;
+  max-width: 90%;
 
-  &__img {
-    width: 50%;
-    height: 100%;
-    @include m.flex(row, center, flex-end);
+  @include b.breakpoint(large) {
+    max-width: 90%;
+    @include m.flex(row, center, center);
+    gap: 7rem;
+    margin: 0 auto;
+    margin-top: 5rem;
+    position: relative;
+
+    &::after {
+      content: url("../../assets/images/footprint2.png");
+      position: absolute;
+      bottom: -15%;
+      left: -4%;
+    }
   }
 
   &__process {
-    width: 55%;
+    width: 100%;
+    @include m.flex(column, center, center);
+    gap: 2rem;
+
+    @include b.breakpoint(large) {
+      @include m.flex(column, start, center);
+      width: 55%;
+      gap: 0.5rem;
+    }
   }
 
   &__heading {
@@ -26,19 +45,27 @@
 
   &__ul {
     @include m.flex(column, start, center);
+    width: 90%;
+    gap: 1.25rem;
+    margin: 0 auto;
+
+    @include b.breakpoint(large) {
+      @include m.flex(column, start, center);
+      width: 100%;
+    }
+  }
+
+  &__work-container {
+    @include m.flex(row, center, flex-start);
     width: 100%;
     gap: 1.5rem;
-    margin-top: 1rem;
-    padding: 0;
-  }
-  &__work-container {
-    @include m.flex(row, center, center);
-    gap: 1.5rem;
 
-    &:nth-child(even) {
-      margin-inline-start: 2.18rem;
-      //   align-items: end;
-      //   justify-content: flex-end;
+    @include b.breakpoint(large) {
+      @include m.flex(row, center, flex-start);
+
+      &:nth-child(even) {
+        margin-inline-start: 2.15rem;
+      }
     }
   }
 
@@ -48,20 +75,31 @@
 
   &__counter {
     @include m.flex(row, center, center);
-    width: 70px;
-    height: 70px;
+    color: c.$color1;
+    font-size: 1.25rem;
+    font-weight: 600;
+    min-width: 3rem;
+    min-height: 3rem;
     border-radius: 50%;
     background-color: c.$bg-color;
-    color: c.$color1;
-    font-size: 1.5rem;
-    font-weight: 600;
     box-shadow: 0 0 30px 0 hsla(0, 0%, 0%, 0.2);
+
+    @include b.breakpoint(large) {
+      @include m.flex(row, center, center);
+
+      width: 4.375rem;
+      height: 4.375rem;
+    }
   }
 
-  &::after {
-    content: url("../../assets/images/footprint2.png");
-    position: absolute;
-    bottom: -15%;
-    left: -4%;
+  &__images {
+    @include m.flex(row, center, center);
+    width: 50;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    @include m.flex(row, center, flex-end);
   }
 }

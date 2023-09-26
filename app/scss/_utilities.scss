@@ -1,0 +1,26 @@
+@use "typography" as t;
+@use "colors" as c;
+
+.text-center {
+  text-align: center;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  outline: none;
+  font-size: 1.15rem;
+  font-weight: 700;
+  font-family: t.$font;
+  border: none;
+  box-sizing: border-box;
+  color: c.$color3;
+  background-color: c.$color1;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}

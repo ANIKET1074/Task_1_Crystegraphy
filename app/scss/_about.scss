@@ -1,23 +1,57 @@
 @use "colors" as c;
 @use "mixins" as m;
 @use "typography" as t;
+@use "breakpoints" as b;
 
 .about {
-  @include m.flex(row, center, space-between);
-  max-width: 78rem;
   margin: 0 auto;
   margin-top: 5rem;
   position: relative;
-  //   gap: 2rem;
+  max-width: 80%;
+  @include m.flex(column, center, center);
+  flex-direction: column-reverse;
+  gap: 2rem;
+
+  @include b.breakpoint(medium) {
+    @include m.flex(row, center, center);
+    max-width: 100%;
+    gap: 3rem;
+  }
+
+  @include b.breakpoint(large) {
+    max-width: 85%;
+    @include m.flex(row, center, space-between);
+  }
 
   &__article {
     @include m.flex(column, start, flex-start);
     gap: 1.5rem;
-    width: 35rem;
+
+    @include b.breakpoint(medium) {
+      @include m.flex(column, start, flex-start);
+      width: 46%;
+      gap: 1.5rem;
+    }
+
+    @include b.breakpoint(large) {
+      @include m.flex(column, start, flex-start);
+      gap: 1.5rem;
+      width: 50%;
+    }
+  }
+
+  &__image {
+    width: 60%;
+    @include b.breakpoint(medium) {
+      width: 38%;
+    }
+    @include b.breakpoint(large) {
+      width: 35%;
+    }
   }
 
   &__img {
-    width: 25rem;
+    width: 100%;
   }
 
   &__heading {
@@ -25,22 +59,23 @@
   }
 
   &__btn {
-    background-color: c.$color1;
-    border-radius: 10px;
     padding: 0.5rem 1.3rem;
     line-height: 22.18px;
-    color: c.$color3;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 16px;
-    border: none;
+    transition: all 0.4s ease-in-out;
+
+    &:hover {
+      background-color: c.$darkcolor;
+      border: 1px solid c.$color1;
+    }
   }
 
   &::after {
-    content: url("../assets/images/footprint1.png");
-    position: absolute;
-    top: 80%;
-    // bottom: 0;
-    right: -7%;
+    @include b.breakpoint(large) {
+      content: url("../assets/images/footprint1.png");
+      position: absolute;
+      top: 80%;
+      // bottom: 0;
+      right: -7%;
+    }
   }
 }

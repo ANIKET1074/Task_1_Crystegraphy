@@ -1,10 +1,10 @@
 @use "colors" as c;
 @use "mixins" as m;
+@use "breakpoints" as b;
 @use "typography" as t;
 
 .memories {
-  @include m.flex(column, center, center);
-  max-width: fit-content;
+  width: 90%;
   margin: 0 auto;
   margin-top: 8rem;
 
@@ -14,10 +14,12 @@
   &__imgs {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-auto-rows: 300px;
     margin-top: 2rem;
     gap: 1.15rem;
-    place-content: center;
+
+    @include b.breakpoint(large) {
+      grid-auto-rows: 300px;
+    }
   }
 
   &__img {
@@ -44,23 +46,21 @@
     height: 100%;
   }
 
-  &__img:last-child {
-    // grid-row-start: 1;
-    grid-row: 1/3;
-    grid-column: 4;
-  }
-  &__img:nth-child(1),
-  &__img:nth-child(4) {
-    @include m.grid-col-span(2);
-  }
-
   &__img:hover > &__img-section {
-    transform: scale(1.1);
+    transform: scale(1.05);
     opacity: 1;
   }
 }
 
-.grid-wide {
+.grid-col-wide {
   grid-column: span 1;
   grid-row: span 2;
+}
+
+.grid-row-wide {
+  grid-row: span 1;
+
+  @include b.breakpoint(large) {
+    grid-column: span 2;
+  }
 }
