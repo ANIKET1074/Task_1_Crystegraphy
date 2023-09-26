@@ -5,18 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="dist/style.css" />
+    <script src="app/js/script.js"></script>
   </head>
   <body>
     <!-- header Section -->
-    <header class="header">
+    <header class="header" id="headers">
       <section class="header__section">
-        <h2 class="header__logo">
-          Dog<img
-            src="./assets/images/footprint.png"
-            alt=""
-            class="header__logo-img"
-          />House
-        </h2>
+        <div class="header__heading">
+          <h2 class="header__logo">
+            Dog<img
+              src="./assets/images/footprint.png"
+              alt=""
+              class="header__logo-img"
+            />House
+          </h2>
+          <div
+            class="hamburger__btn"
+            id="hamburger-menu"
+            onclick="activateSidebar()"
+          >
+            &#9776;
+          </div>
+          <!-- <button class="hamburger__btn">
+            <div class="hamburger__btns"></div>
+          </button> -->
+        </div>
 
         <!-- Nav component -->
         <nav class="nav">
@@ -37,187 +50,273 @@
               <a href="#blog-page" class="nav__items">Blog</a>
             </li>
           </ul>
+          <button href="#" class="nav__link btn">Contact Us</button>
         </nav>
-        <a href="#" class="nav__link">Contact Us</a>
+      </section>
+
+      <section class="sidebar" id="sidebar-menu">
+        <!-- Sidebar -->
+        <div
+          class="sidebar__close"
+          id="close-btn"
+          onclick="deActivateSidebar()"
+        >
+          &#x2715;
+        </div>
+        <nav class="sidebar__nav">
+          <ul class="sidebar__ul">
+            <li class="nav__list">
+              <a href="#home-page" class="nav__items">Home</a>
+            </li>
+            <li class="nav__list">
+              <a href="#about-page" class="nav__items">About us</a>
+            </li>
+            <li class="nav__list">
+              <a href="#service-page" class="nav__items">Services</a>
+            </li>
+            <li class="nav__list">
+              <a href="#ourteam-page" class="nav__items">Our Team</a>
+            </li>
+            <li class="nav__list">
+              <a href="#blog-page" class="nav__items">Blog</a>
+            </li>
+          </ul>
+          <button href="#" class="nav__link btn">Contact Us</button>
+        </nav>
       </section>
     </header>
 
+    <!-- Main Section -->
     <main class="main">
+      <!-- home section -->
       <section id="home-page" class="home">
-		<article class="home__container">
-
-			<h1 class="home__heading">Not only People need a house</h1>
-		<!-- <h1 class="home__heading"/></h1> -->
-        <p class="home__desc">
-			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi
-			officiis porro voluptatum! Nisi recusandae consequuntur iure eum
-			reiciendis? Consectetur, in?
-        </p>
-        <button class="home__btn">Make a Friends</button>
-	</div>
+        <article class="home__container">
+          <h1 class="home__heading">Not only People need a house</h1>
+          <p class="home__desc">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi
+            officiis porro voluptatum! Nisi recusandae consequuntur iure eum
+            reiciendis? Consectetur, in?
+          </p>
+          <button class="home__btn btn">Make a Friends</button>
+        </article>
       </section>
 
-
-	  <!-- About Section -->
+      <!-- About Section -->
       <section id="about-page" class="about">
-        <img src="./assets/images/dog.png" alt="" class="about__img" />
+        <div class="about__image">
+          <img src="./assets/images/dog.png" alt="" class="about__img" />
+        </div>
         <article class="about__article">
           <h1><span class="about__heading"> About </span> The dog House</h1>
           <p class="about__desc">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur
             tempora voluptas illo mollitia doloribus! In, magni iusto. Quibusdam
             porro architecto fugit cumque minima ut error labore alias,
-            mollitia, quaerat impedit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, omnis!
+            mollitia, quaerat impedit? Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Asperiores, omnis!
           </p>
           <p class="about__desc">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
             exercitationem minima totam aliquam odio temporibus impedit delectus
             obcaecati id, harum minus perspiciatis veritatis ipsum labore amet
-            voluptatem explicabo libero magnam. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque iusto explicabo ab, quasi modi deserunt optio atque fugiat consectetur. Eaque!
+            voluptatem explicabo libero magnam. Lorem ipsum dolor sit, amet
+            consectetur adipisicing elit. Doloremque iusto explicabo ab, quasi
+            modi deserunt optio atque fugiat consectetur. Eaque!
           </p>
-          <button class="about__btn">Read more</button>
+          <button class="about__btn btn">Read more</button>
         </article>
       </section>
 
-	  <!-- Services Section -->
-<section class="services" id="service-page">
-	<h1><span class="services__heading">Love </span>helping dogs?</h1>
-	<ul class="services__ul">
-		<li class="services__list">
-			<div class="services__imgs">
-				<img src="./assets/images/svg1.svg" alt="svg1" class="services__img">
-			</div>
-			<h2>Become a Volunteer</h2>
-			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint nemo blanditiis reiciendis. Amet, corrupti maiores? Sed impedit voluptatum nihil odio.</p>
-		</li>
-		<li class="services__list">
-			<div class="services__imgs">
-				<img src="./assets/images/svg2.svg" alt="svg1" class="services__img">
-			</div>
-			<h2>Make a donation</h2>
-			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint nemo blanditiis reiciendis. Amet, corrupti maiores? Sed impedit voluptatum nihil odio.</p>
-		</li>
-		<li class="services__list">
-			<div class="services__imgs">
-				<img src="./assets/images/svg3.svg" alt="svg1" class="services__img">
-			</div>
-			<h2>Become a pet Parent</h2>
-			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint nemo blanditiis reiciendis. Amet, corrupti maiores? Sed impedit voluptatum nihil odio.</p>
-		</li>
-	</ul>
-</section>
+      <!-- Services Section -->
+      <section class="services" id="service-page">
+        <h1><span class="services__heading">Love </span>helping dogs?</h1>
+        <ul class="services__ul">
+          <li class="services__list">
+            <div class="services__imgs">
+              <img
+                src="./assets/images/svg1.svg"
+                alt="svg1"
+                class="services__img"
+              />
+            </div>
+            <h2>Become a Volunteer</h2>
+            <p class="services__desc">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint
+              nemo blanditiis reiciendis. Amet, corrupti maiores? Sed impedit
+              voluptatum nihil odio.
+            </p>
+          </li>
+          <li class="services__list">
+            <div class="services__imgs">
+              <img
+                src="./assets/images/svg2.svg"
+                alt="svg1"
+                class="services__img"
+              />
+            </div>
+            <h2>Make a donation</h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint
+              nemo blanditiis reiciendis. Amet, corrupti maiores? Sed impedit
+              voluptatum nihil odio.
+            </p>
+          </li>
+          <li class="services__list">
+            <div class="services__imgs">
+              <img
+                src="./assets/images/svg3.svg"
+                alt="svg1"
+                class="services__img"
+              />
+            </div>
+            <h2>Become a pet Parent</h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint
+              nemo blanditiis reiciendis. Amet, corrupti maiores? Sed impedit
+              voluptatum nihil odio.
+            </p>
+          </li>
+        </ul>
+      </section>
 
-<!-- Memories Section -->
-<section class="memories" id="memories-page">
-<h1>Happy <span class="memories__heading">Memories</span></h1>
-<div class="memories__imgs">
-	<div class="memories__img">
-		<div class="memories__img-section">
-			<img src="./assets/images/dog1.png" alt="" class="memories__images">
-		</div>
-	</div>
-	<div class="memories__img">
-		<div class="memories__img-section">
-			<img src="./assets/images/dog2.png" alt="" class="memories__images ">
-		</div>
-	</div>
-	<div class="memories__img">
-		<div class="memories__img-section">
-			<img src="./assets/images/dog4.png" alt="" class="memories__images">
-		</div>
-	</div>
-	<div class="memories__img">
-		<div class="memories__img-section">
-			<img src="./assets/images/dog5.png" alt="" class="memories__images">
-		</div>
-	</div>
-	<div class="memories__img grid-wide">
-		<div class="memories__img-section">
-			<img src="./assets/images/dog3.png" alt="" class="memories__images">
-		</div>
-	</div>
-</div>
-</section>
+      <!-- Memories Section -->
+      <section class="memories" id="memories-page">
+        <h1 class="text-center">
+          Happy <span class="memories__heading">Memories</span>
+        </h1>
+        <div class="memories__imgs">
+          <div class="memories__img grid-row-wide">
+            <div class="memories__img-section">
+              <img
+                src="./assets/images/dog1.png"
+                alt=""
+                class="memories__images"
+              />
+            </div>
+          </div>
+          <div class="memories__img">
+            <div class="memories__img-section">
+              <img
+                src="./assets/images/dog2.png"
+                alt=""
+                class="memories__images"
+              />
+            </div>
+          </div>
+          <div class="memories__img grid-col-wide">
+            <div class="memories__img-section">
+              <img
+                src="./assets/images/dog3.png"
+                alt=""
+                class="memories__images"
+              />
+            </div>
+          </div>
+          <div class="memories__img">
+            <div class="memories__img-section">
+              <img
+                src="./assets/images/dog4.png"
+                alt=""
+                class="memories__images"
+              />
+            </div>
+          </div>
+          <div class="memories__img grid-row-wide">
+            <div class="memories__img-section">
+              <img
+                src="./assets/images/dog5.png"
+                alt=""
+                class="memories__images"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-
-<!-- Adoption Section -->
-<section class="adoption" id="adoption-page">
-	<img src="./assets/images/dog6.png" alt="" class="adoption__img">
-	<article class="adoption__process">
-		<h1>How <span class="adoption__heading">adoption</span> works?</h1>
-		<ul class="adoption__ul">
-			<div class="adoption__work-container">
-				<span class="adoption__counter">1</span>
-				<li class="adoption__list">Find a pet you wish to take home</li>
-			</div>
-			<div class="adoption__work-container">
-				<span class="adoption__counter">2</span>
-				<li class="adoption__list">Go through our adoption requirements and checklist</li>
-			</div>
-			<div class="adoption__work-container">
-				<span class="adoption__counter">3</span>
-				<li class="adoption__list">Schedule a visit with the shelter</li>
-			</div>
-			<div class="adoption__work-container">
-				<span class="adoption__counter">4</span>
-				<li class="adoption__list">Meet the pet and complete procedure </li>
-			</div>
-		</ul>
-
-	</article>
-</section>
-<footer class="footer">
-	<section class="footer__section">
-		<article class="footer__sections">
-			<h2>For questions and Suggestions</h2>
-			<div class="footer__contact-details">
-				<div class="footer__contact-image">
-
-					<img src="./assets/images/bag.svg" alt="">
-				</div>
-				<div>
-					info@pethouse.com
-				</div>
-			</div>
-			<div class="footer__contact-details">
-				<div class="footer__contact-image">
-					<div class="footer__contact-image">
-					<img src="./assets/images/call.svg" alt="">
-					</div>
-				</div>
-					<div>
-					+1486789789
-				</div>
-			</div>
-		</article>
-		<article class="footer__sections">
-			<h2>We are waiting
-				for your visit</h2>
-			<div class="footer__contact-details">
-				<div class="footer__contact-image">
-					<img src="./assets/images/location.svg" alt="" class="footer__contact-img">
-				</div>
-					<div>
-					34, Street road, London.
-				</div>
-			</div>
-			<div class="footer__contact-details">
-				<div class="footer__contact-image">
-					<div class="footer__contact-image">
-					<img src="./assets/images/location.svg" alt="" class="footer__contact-img">
-					</div>
-				</div>
-					<div>
-					E-102 , Volcano App, London.
-				</div>
-			</div>
-		</article>
-		<article class="footer__sections">
-			<img src="./assets/images/dog7.png" alt="">
-		</article>
-	</section>
-</footer>
+      <!-- Adoption Section -->
+      <section class="adoption" id="adoption-page">
+        <div class="adoption__images">
+          <img src="./assets/images/dog6.png" alt="" class="adoption__img" />
+        </div>
+        <article class="adoption__process">
+          <h1>How <span class="adoption__heading">adoption</span> works?</h1>
+          <ul class="adoption__ul">
+            <div class="adoption__work-container">
+              <span class="adoption__counter">1</span>
+              <li class="adoption__list">Find a pet you wish to take home</li>
+            </div>
+            <div class="adoption__work-container">
+              <span class="adoption__counter">2</span>
+              <li class="adoption__list">
+                Go through our adoption requirements and checklist
+              </li>
+            </div>
+            <div class="adoption__work-container">
+              <span class="adoption__counter">3</span>
+              <li class="adoption__list">Schedule a visit with the shelter</li>
+            </div>
+            <div class="adoption__work-container">
+              <span class="adoption__counter">4</span>
+              <li class="adoption__list">
+                Meet the pet and complete procedure
+              </li>
+            </div>
+          </ul>
+        </article>
+      </section>
+      <footer class="footer">
+        <section class="footer__section">
+          <article class="footer__sections">
+            <h2>For questions and Suggestions</h2>
+            <div class="footer__contact-details">
+              <div class="footer__contact-image">
+                <img src="./assets/images/bag.svg" alt="" />
+              </div>
+              <div>info@pethouse.com</div>
+            </div>
+            <div class="footer__contact-details">
+              <div class="footer__contact-image">
+                <div class="footer__contact-image">
+                  <img src="./assets/images/call.svg" alt="" />
+                </div>
+              </div>
+              <div>+1486789789</div>
+            </div>
+          </article>
+          <article class="footer__sections">
+            <h2>We are waiting for your visit</h2>
+            <div class="footer__contact-details">
+              <div class="footer__contact-image">
+                <img
+                  src="./assets/images/location.svg"
+                  alt=""
+                  class="footer__contact-img"
+                />
+              </div>
+              <div>34, Street road, London.</div>
+            </div>
+            <div class="footer__contact-details">
+              <div class="footer__contact-image">
+                <div class="footer__contact-image">
+                  <img
+                    src="./assets/images/location.svg"
+                    alt=""
+                    class="footer__contact-img"
+                  />
+                </div>
+              </div>
+              <div>E-102 , Volcano App, London.</div>
+            </div>
+          </article>
+          <article class="footer__sections">
+            <img
+              src="./assets/images/dog7.png"
+              alt=""
+              class="footer__dog-img"
+            />
+          </article>
+        </section>
+      </footer>
     </main>
-
   </body>
 </html>
