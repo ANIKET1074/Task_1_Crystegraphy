@@ -7,6 +7,8 @@
   width: 80%;
   height: 100svh;
   position: absolute;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
   top: 0;
   background-color: rgba(0, 0, 0, 0.9);
   @include m.flex(column, center, flex-start);
