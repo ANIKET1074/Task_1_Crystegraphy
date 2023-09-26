@@ -15,9 +15,17 @@
     width: 100%;
     padding: 1rem;
 
+    @include b.breakpoint(medium) {
+      @include m.flex(row, center, space-evenly);
+      gap: 1.5rem;
+      padding: 1rem 1.75rem;
+      width: 100%;
+    }
+
     @include b.breakpoint(large) {
       @include m.flex(row, center, space-evenly);
       padding: 2rem 2rem 1rem 2rem;
+      gap: 2rem;
     }
   }
   &__sections {
@@ -27,12 +35,13 @@
     margin: auto;
 
     @include b.breakpoint(medium) {
-      width: 45%;
+      @include m.flex(column, start, center);
+      max-width: 32%;
     }
 
     @include b.breakpoint(large) {
       @include m.flex(column, start, center);
-      width: 25%;
+      max-width: 25%;
       gap: 1.5rem;
     }
   }
@@ -53,7 +62,7 @@
     height: auto;
 
     @include b.breakpoint(medium) {
-      width: 50%;
+      width: 80%;
     }
     @include b.breakpoint(large) {
       width: 50%;
