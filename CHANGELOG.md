@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/ANIKET1074/Task_1_Crystegraphy/compare/v1.1.8...v1.2.0) (2023-09-26)
+
+
+### Features
+
+* some new section added in the html file ([96f92eb](https://github.com/ANIKET1074/Task_1_Crystegraphy/commit/96f92ebbf5aefafb09ba922b24191d7d9c7b07f3))
+
 ### [1.1.8](https://github.com/ANIKET1074/Task_1_Crystegraphy/compare/v1.1.7...v1.1.8) (2023-09-26)
 
 ### [1.1.7](https://github.com/ANIKET1074/Task_1_Crystegraphy/compare/v1.1.6...v1.1.7) (2023-09-26)
