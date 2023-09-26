@@ -11,4 +11,4 @@ const deActivateSidebar = () => {
   hamBurgerBtn.classList.remove("sidebar__active");
 };
 
-document.addEventListener("DOMContentLoaded", initApp);
+// document.addEventListener("DOMContentLoaded", initApp);
